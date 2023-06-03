@@ -1,0 +1,271 @@
+{
+	"age": {
+		"type": "continuous",
+		"values": {
+			"15-95": "ignored"
+		}
+	},
+	"workclass": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"Worked": {
+					"With-Pay": {
+						"Private": null,
+						"Self-emp": {
+							"Self-emp-not-inc": null,
+							"Self-emp-inc": null
+						},
+						"Gov": {
+							"Federal-gov": null,
+							"Local-gov": null,
+							"State-gov": null
+						}
+					},
+					"Without-pay": null
+				},
+				"Never-worked": null
+			}
+		}
+	},
+	"fnlwgt": {
+		"type": "continuous",
+		"values": {
+			"0-1500000": "ignored"
+		}
+	},
+	"education": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"Without-Post-Secondary": {
+					"Preschool": null,
+					"Elementary": {
+						"1st-4th": null,
+						"5th-6th": null,
+						"7th-8th": null
+					},
+					"Secondary": {
+						"Junior-Secondary": {
+							"9th": null,
+							"10th": null
+						},
+						"Senior-Secondary": {
+							"11th": null,
+							"12th": null,
+							"HS-grad": null
+						}
+					}
+				},
+				"Post-secondary": {
+					"Some-college": null,
+					"Assoc": {
+						"Assoc-acdm": null,
+						"Assoc-voc": null
+					},
+					"University": {
+						"Bachelors": null,
+						"Prof-school": null,
+						"Post-grad": {
+							"Masters": null,
+							"Doctorate": null
+						}
+					}
+				}
+			}
+		}
+	},
+	"education-num": {
+		"type": "continuous",
+		"values": {
+			"1-20": "ignored"
+		}
+	},
+	"martial-status": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"Married": {
+					"Partner-present": {
+						"Married-civ-spouse": null,
+						"Married-AF-spouse": null
+					},
+					"Partner-absent": {
+						"Divorced": null,
+						"Separated": null,
+						"Widowed": null,
+						"Married-spouse-absent": null
+					}
+				},
+				"Never-married": null
+			}
+		}
+	},
+	"occupation": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"White-collar": {
+					"Exec-managerial": null,
+					"Prof-specialty": null,
+					"Sales": null,
+					"Adm-clerical": null
+				},
+				"Blue-collar": {
+					"Tech-support": null,
+					"Craft-repair": null,
+					"Machine-op-inspct": null,
+					"Handlers-cleaners": null,
+					"Transport-moving": null,
+					"Priv-house-serv": null
+				},
+				"Other": {
+					"Protective-serv": null,
+					"Armed-Forces": null,
+					"Farming-fishing": null,
+					"Other-service": null
+				}
+			}
+		}
+	},
+	"relationship": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"In-family": {
+					"Wife": null,
+					"Own-child": null,
+					"Husband": null
+				},
+				"Not-in-family": null,
+				"Other-relative": null,
+				"Unmarried": null
+			}
+		}
+	},
+	"race": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"White": null,
+				"Colored": {
+					"Asian-Pac-Islander": null,
+					"Amer-Indian-Eskimo": null,
+					"Other": null,
+					"Black": null
+				}
+			}
+		}
+	},
+	"sex": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"Female": null,
+				"Male": null
+			}
+		}
+	},
+	"capital-gain": {
+		"type": "continuous",
+		"values": {
+			"0-100000": "ignored"
+		}
+	},
+	"capital-loss": {
+		"type": "continuous",
+		"values": {
+			"0-5000": "ignored"
+		}
+	},
+	"hours-per-week": {
+		"type": "continuous",
+		"values": {
+			"1-100": "ignored"
+		}
+	},
+	"native-country": {
+		"type": "discrete",
+		"values": {
+			"Any": {
+				"North-America": {
+					"USA": {
+						"United-States": null,
+						"Outlying-US(Guam-USVI-etc)": null
+					},
+					"Canada": null
+				},
+				"Middle-America": {
+					"Mexico": null,
+					"Honduras": null,
+					"Guatemala": null,
+					"Nicaragua": null,
+					"El-Salvador": null
+				},
+				"South-America": {
+					"Western-South-America": {
+						"Ecuador": null,
+						"Peru": null
+					},
+					"Northern-South-America": {
+						"Columbia": null
+					},
+					"Caribbean": {
+						"Puerto-Rico": null,
+						"Dominican-Republic": null,
+						"Jamaica": null,
+						"Cuba": null,
+						"Haiti": null,
+						"Trinadad&Tobago": null
+					}
+				},
+				"Europe": {
+					"Western-Europe": {
+						"France": null,
+						"England": null,
+						"Ireland": null,
+						"Scotland": null,
+						"Holand-Netherlands": null
+					},
+					"Southern-Europe": {
+						"Italy": null,
+						"Greece": null
+					},
+					"Southwestern-Europe": {
+						"Portugal": null
+					},
+					"Southeastern-Europe": {
+						"Yugoslavia": null
+					},
+					"Central-Europe": {
+						"Hungary": null,
+						"Germany": null,
+						"Poland": null
+					}
+				},
+				"Asia": {
+					"Southeastern-Asia": {
+						"Philippines": null,
+						"Thailand": null,
+						"Cambodia": null,
+						"Vietnam": null,
+						"Laos": null
+					},
+					"Southern-Asia": {
+						"India": null
+					},
+					"Eastern-Asia": {
+						"Japan": null,
+						"China": null,
+						"Hong": null,
+						"Taiwan": null,
+						"South": null
+					},
+					"Middle-East": {
+						"Iran": null
+					}
+				}
+			}
+		}
+	}					
+}
