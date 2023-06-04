@@ -1,6 +1,6 @@
 from itertools import count
 import queue
-from typing import List
+from typing import List, Tuple, Any
 
 class PID_node:
   def __init__(self, pid: int, a_ava: List[str]):
@@ -11,6 +11,10 @@ class PID_node:
     self.a_ava = a_ava
     self.partition_size = 0
     self.children = []
+
+  def set_split_index(self, split_attr: str, split_value):
+    self.split_attr = split_attr
+    self.split_value = split_value
 
   def is_leaf(self):
     return len(self.children) == 0
@@ -45,22 +49,23 @@ class PID_tree:
           bfs.put(child)
 
     return None
-
-  def insert(self, split_attr: str, split_value, tax_leaf=True):
+  
+  def insert(self, new_meta : List[Tuple[str, Any]], tax_leaf=True):
     parent = self.__find_parent_node(self.root)
 
     if parent is not None:
-      new_node = PID_node(next(self.pid_generator), parent.a_ava)
+      for (split_attr, split_value) in new_meta:
+        new_node = PID_node(next(self.pid_generator), parent.a_ava)
 
-      if tax_leaf == True:
-        new_node.delete_from_A_ava(split_attr)
+        if tax_leaf == True:
+          new_node.delete_from_A_ava(split_attr)
 
-      new_node.split_attr = split_attr
-      new_node.split_value = split_value
-      new_node.quasi_identifier = parent.quasi_identifier.copy()
-      new_node.quasi_identifier[parent.a_ava.index(split_attr)] = split_value
-      parent.children.append(new_node)
-      return new_node.partition_id
+        new_node.set_split_index(split_attr, split_value)
+        new_node.quasi_identifier = parent.quasi_identifier.copy()
+        new_node.quasi_identifier[parent.a_ava.index(split_attr)] = split_value
+        parent.children.append(new_node)
+
+        return new_node.partition_id
     
     return None
   
